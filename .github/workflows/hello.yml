@@ -12,3 +12,10 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "Hello, GitHub Actions!"
+    
+      - name: Show Context Information
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "This workflow was triggered by a ${{ github.event_name }} event."
